@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import {  FaGithub, FaLinkedin, FaRegHandshake } from "react-icons/fa";
+import {  FaChevronRight, FaGithub, FaLinkedin, FaRegHandshake } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -33,7 +33,7 @@ const page = () => {
         </p>
       </div>
       <div className='flex items-center gap-5 my-5'>
-        <button onClick={() => {router.replace('/')}} className="tilt-button flex items-center gap-5 text-xl">
+        <button onClick={() => {router.replace('/#EmailSection')}} className="tilt-button flex items-center gap-5 text-xl">
           Leave A Message <IoMailSharp/> 
         </button>
         <button onClick={() => {router.replace('/projects')}} className="tilt-button flex items-center gap-5 text-xl">
@@ -60,6 +60,20 @@ const page = () => {
         </Link>
 
         </div>
+      </div>
+      <div className='my-10 mt-20 w-full text-right'>
+      <Link href="/#EmailSection">
+        <button className='tilt-button'>
+          <div className='text-xl'>
+          Glad to have you here
+          </div>
+          <div className='flex p-2 items-center gap-2 text-sm'>
+          Send Me A Message
+          <FaChevronRight/>
+          </div>
+
+        </button>
+      </Link>
       </div>
     </div>
   )

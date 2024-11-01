@@ -4,6 +4,7 @@ import React from 'react';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useSpring, animated } from '@react-spring/web';
 import { FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 // import Image from 'next/image';
 
 interface CardProps {
@@ -35,7 +36,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, githubUrl }) 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img width={70} height={70} src = {imageUrl} alt={title} className="p-2 rounded-full object-cover" />
+      <Image width={70} height={70} src = {imageUrl} alt={title} className="p-2 rounded-full object-cover" />
       <div className="p-4 overflow-auto">
         <h3 className="text-xl font-semibold">{title}</h3>
         <p className='overflow-auto text-sm'>{description}</p>

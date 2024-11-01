@@ -51,6 +51,12 @@ html.dark {
   transform: rotateX(20deg) rotateY(20deg) scale(1.05); /* Increased tilt angles and scale for a more dramatic effect */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
 }
+.custom-toast-container {
+  position: absolute; /* Change position to absolute */
+  top: 1rem;         /* Adjust as needed */
+  right: 1rem;       /* Adjust as needed */
+  z-index: 1000;     /* Ensure it appears above other elements */
+}
 
 body {
   background-color: var(--background);
