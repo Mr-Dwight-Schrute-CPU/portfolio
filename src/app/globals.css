@@ -59,27 +59,17 @@ html.dark {
   }
 }
 
+
 @font-face {
-  font-family: 'Futura 3D';
-  src: url('/fonts/Futura3D.woff2') format('woff2'),
-       url('/fonts/Futura3D.woff') format('woff'),
-       url('/fonts/Futura3D.ttf') format('truetype'); /* Adjust the formats as needed */
+  font-family: 'BDSuper';
+  src: url('/fonts/bd-super.woff2') format('woff2'), /* Modern browsers */
+       url('/fonts/bd-super.woff') format('woff'); /* Older browsers */
   font-weight: normal;
   font-style: normal;
 }
 
-/* Custom Font Classes */
-.font-futura-3d {
-  font-family: 'Futura 3D', sans-serif; /* Use Futura 3D font */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for a 3D effect */
-}
-
-.gradient-text {
-  background: linear-gradient(270deg, #00ffff, #ff00ff); /* Bright Cyan and Magenta */
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 6s ease infinite;
+body {
+  font-family: 'BDSuper', sans-serif; /* Apply the font globally */
 }
 
 body {

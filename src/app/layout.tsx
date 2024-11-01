@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/Images/AppLogo.ico" /> 
+        <title>KunalNasa - Portfolio Website</title> 
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {mounted ? (
           

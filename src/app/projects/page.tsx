@@ -49,7 +49,6 @@ const page = () => {
           Show some love here
           <FaChevronRight/>
           </div>
-
         </button>
       </Link>
       </div>

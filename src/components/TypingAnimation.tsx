@@ -5,16 +5,14 @@ import { TypeAnimation } from "react-type-animation";
 
 const TypingAnimation = () => {
     return <TypeAnimation sequence={[
-        "Full Stack Developer",
+        "a Full Stack Developer",
         1000,
-        "Lifelong Learner",
+        "a Lifelong Learner",
         1000,
-        "Building Engaging User Experiences",
-        1000,
-        "Exploring New Technologies",
+        "Open to Work!!!",
         1000,
       ]}
-       wrapper="span" speed={50} className="font-bold font-serif lg:text-3xl text-indigo-500" repeat={Infinity} />;
+       wrapper="span" speed={50} className="font-bold  lg:text-3xl text-green-500" repeat={Infinity} />;
 };
 
 export default TypingAnimation;
