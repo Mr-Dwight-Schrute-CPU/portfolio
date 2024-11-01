@@ -1,8 +1,7 @@
 // src/components/Card.tsx
 'use client';
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { useSpring, animated } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 import { FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 // import Image from 'next/image';
@@ -16,11 +15,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imageUrl, title, description, githubUrl }) => {
   const [isHovered, setIsHovered] = React.useState(false);
-
-  // const springProps = useSpring({
-  //   scale: isHovered ? 1.05 : 1,
-  //   config: { tension: 300, friction: 10 },
-  // });
 
   return (
     <animated.div
