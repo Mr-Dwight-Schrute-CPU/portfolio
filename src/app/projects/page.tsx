@@ -42,10 +42,10 @@ const page = () => {
       <div className='my-10 mt-20 w-full text-right'>
       <Link href="/#EmailSection">
         <button className='tilt-button'>
-          <div className='text-xl'>
+          <div className='md:text-xl'>
           Liked My Projects ?
           </div>
-          <div className='flex p-2 items-center gap-2 text-sm'>
+          <div className='flex p-1 md:p-2 items-center gap-2 text-sm'>
           Show some love here
           <FaChevronRight/>
           </div>

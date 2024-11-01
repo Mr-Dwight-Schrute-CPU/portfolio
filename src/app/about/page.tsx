@@ -14,8 +14,8 @@ const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   return (
-    <div className='MainContainer w-7/12 my-14 mx-auto flex flex-col items-center justify-center'>
-      <h1 className='text-4xl font-semibold sm:text-5xl'>Hey, I am 
+    <div className='MainContainer w-10/12 md:w-7/12 my-14 mx-auto flex flex-col items-center justify-center'>
+      <h1 className='text-3xl text-center font-semibold md:text-5xl'>Hey, I am 
         <span className='text-blue-500'>
           <Link className="p-2 rounded-full" href='https://www.linkedin.com/in/kunal-nasa-24840b249/' target="_blank" rel="noopener noreferrer">@KunalNasa</Link>
         </span>
@@ -32,7 +32,7 @@ const page = () => {
         I am <span className='text-blue-500 font-semibold'>currently seeking internship opportunities</span>  to gain valuable industry experience and apply my skills in a real-world setting. I am eager to learn from professionals in the field and contribute to meaningful projects. My commitment to continuous learning drives me to tackle complex challenges and develop both my technical and soft skills, preparing me for a successful career in technology.
         </p>
       </div>
-      <div className='flex items-center gap-5 my-5'>
+      <div className='flex flex-col md:flex-row items-center gap-5 my-5'>
         <button onClick={() => {router.replace('/#EmailSection')}} className="tilt-button flex items-center gap-5 text-xl">
           Leave A Message <IoMailSharp/> 
         </button>
@@ -40,7 +40,7 @@ const page = () => {
               Visit Projects <GoProjectSymlink/>
         </button>
       </div>
-      <div className='Connect-with-me text-left w-full'>
+      <div className='Connect-with-me text-center md:text-left w-full'>
         <div className='flex items-center gap-4 mb-5 text-2xl font-mono font-semibold'>
           <FaRegHandshake />
           <span className='text-blue-500'>Connect With Me</span>

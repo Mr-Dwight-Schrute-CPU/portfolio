@@ -17,28 +17,28 @@ export default function Home() {
   const router = useRouter();
   
   return (
-    <div className="relative h-auto flex flex-col mx-auto w-7/12">
-      <div className="mt-20">
+    <div className="relative h-auto w-10/12 flex flex-col mx-auto md:w-7/12">
+      <div className="md:mt-20 mt-14">
         <p className="opacity-65 py-1 font-serif uppercase">&gt; Hello World !</p>
-        <h1 className="text-7xl font-bold my-1">Hey, I&apos;m <span className="text-blue-500">Kunal Nasa</span></h1>
-        <h3 className="text-3xl font-bold my-5">I am <TypingAnimation /></h3>
-        <h4 className="text-xl">
+        <h1 className="md:text-7xl text-4xl font-bold my-1">Hey, I&apos;m <span className="text-blue-500">Kunal Nasa</span></h1>
+        <h3 className="md:text-3xl text-xl font-bold my-5">I am <TypingAnimation /></h3>
+        <h4 className="md:text-xl">
           Passionate about creating <span className="text-blue-500 font-semibold uppercase">full-stack</span> applications, I am eager to explore new opportunities that allow me to deliver innovative solutions and make a meaningful impact.
         </h4>
 
-        <div className="flex font-semibold items-center text-2xl my-5 gap-3">
+        <div className="flex font-semibold items-center md:text-2xl text-lg my-5 gap-1 md:gap-3">
           <p>Connect With Me</p>
-          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-2 rounded-full" href='https://github.com/KunalNasa' target="_blank" rel="noopener noreferrer"><FaGithub /></Link>
-          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-2 rounded-full" href='https://www.linkedin.com/in/kunal-nasa-24840b249/' target="_blank" rel="noopener noreferrer"><FaLinkedin /></Link>
-          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 rounded-full" href='https://x.com/nasa_kunal' target="_blank" rel="noopener noreferrer"><FaTwitterSquare /></Link>
+          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://github.com/KunalNasa' target="_blank" rel="noopener noreferrer"><FaGithub /></Link>
+          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://www.linkedin.com/in/kunal-nasa-24840b249/' target="_blank" rel="noopener noreferrer"><FaLinkedin /></Link>
+          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://x.com/nasa_kunal' target="_blank" rel="noopener noreferrer"><FaTwitterSquare /></Link>
         </div>
         <div className="h-64 text-5xl w-full flex items-center justify-center animation-bounce">
           <RiScrollToBottomLine />
         </div>
       </div>
 
-      <div className="my-14 mx-auto font-serif">
-        <h2 className=" lg:text-7xl md:text-5xl sm:text-4xl  flex font-bold w-1/3 border-b-2 mx-auto mb-8">
+      <div className="md:my-14 my-5 w-10/12 mx-auto">
+        <h2 className=" lg:text-7xl md:text-5xl text-4xl flex font-bold items-center w-1/2 md:w-1/3 border-b-2 mx-auto mb-8">
           Skills <span className="text-blue-500 px-2"><MdOutlineMilitaryTech /></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       <div className="projects-div my-14 font-serif">
-        <h3 className="md:text-4xl flex font-bold w-1/3 mb-8"> <span className="text-green-500">___</span> Projects </h3>
+        <h3 className="md:text-4xl text-3xl flex font-bold w-1/3 mb-8"> <span className="text-green-500">___</span> Projects </h3>
         <div className="flex justify-center w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project, index) => (
