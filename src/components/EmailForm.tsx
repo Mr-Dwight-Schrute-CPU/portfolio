@@ -1,7 +1,5 @@
 import sendMail from '@/helpers/SendMail';
 import React, { useState } from 'react';
-import Card from './Card';
-import { toast } from '@/hooks/use-toast';
 
 const EmailForm: React.FC = () => {
   const [userName, setUserName] = useState<string>('');

@@ -29,6 +29,7 @@ const sendMail = (userName: string, userEmail: string, userMessage: string) => {
 
   emailjs.send(serviceID, templateID, templateParams, userID)
     .then((response) => {
+        console.log(response);
         toast({
             title: 'Success',
             description: 'Email Sent Successfully!',
