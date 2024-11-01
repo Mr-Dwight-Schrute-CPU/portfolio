@@ -24,7 +24,7 @@ const page = () => {
         <Image width={150} height={150} src="/Images/HelloBitmoji.webp" alt="" />
       </div>
       <div className='about-me my-5 font-mono'>
-        <h3 className='flex items-center gap-2 text-3xl font-semibold font-mono'> <IoInformationCircleOutline/> Short Bio</h3>
+        <h3 className='flex items-center gap-2 text-3xl font-semibold font-mono'> <IoInformationCircleOutline/> Brief Intro</h3>
         <p className='p-2 text-lg sm:text-2xl'>
         I am a third-year B.Tech student at <span className='text-blue-500 font-semibold'>USICT (GGSIPU Main Campus)
           </span>, passionate about web development and technology. With a strong foundation in full-stack development, I specialize in creating innovative and user-friendly applications using <span className='text-blue-500 font-semibold'> Next.js and the MERN stack.</span> I have experience working with tools like Zod and Tailwind CSS, which I use to enhance both the design and functionality of my projects. <br/> <br/>

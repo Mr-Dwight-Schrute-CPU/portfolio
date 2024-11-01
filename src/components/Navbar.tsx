@@ -56,13 +56,13 @@ const Navbar = () => {
       &times;
     </button>
     <div className="flex flex-col gap-4 mt-4">
-      <Link href="/" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/' ? 'text-indigo-500' : ''}`}>
+      <Link href="/" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/' ? 'text-blue-500' : ''}`}>
         <FaHome /> Home
       </Link>
-      <Link href="/projects" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/projects' ? 'text-indigo-500' : ''}`}>
+      <Link href="/projects" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/projects' ? 'text-blue-500' : ''}`}>
         <GoProjectSymlink /> Projects
       </Link>
-      <Link href="/about" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/about' ? 'text-indigo-500' : ''}`}>
+      <Link href="/about" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/about' ? 'text-blue-500' : ''}`}>
         <IoInformationCircleOutline /> About Me
       </Link>
     </div>

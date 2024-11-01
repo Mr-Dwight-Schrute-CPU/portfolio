@@ -18,19 +18,23 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// can not add metadata because of client component
+
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    document.title = "KunalNasa - Portfolio";
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = "/Images/AppLogo.ico";
+    document.head.appendChild(favicon);
   }, []);
 
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/Images/AppLogo.ico" /> 
-        <title>KunalNasa - Portfolio Website</title> 
-      </Head>
+      
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {mounted ? (
           
