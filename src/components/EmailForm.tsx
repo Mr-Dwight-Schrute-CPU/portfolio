@@ -1,7 +1,7 @@
 import sendMail from '@/helpers/SendMail';
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
 import Card from './Card';
+import { toast } from '@/hooks/use-toast';
 
 const EmailForm: React.FC = () => {
   const [userName, setUserName] = useState<string>('');
@@ -24,10 +24,18 @@ const EmailForm: React.FC = () => {
       setUserEmail('');
       setUserMessage('');
       setError(''); // Clear error message
-      toast.success('Email sent successfully!');
+      // toast({
+      //   title: 'Success',
+      //   description: 'Email sent successfully!',
+      //   variant : "default"
+      // });
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send email. Please try again later.');
+      // toast({
+      //   title: 'Send Error',
+      //   description: 'Email failed to send. Please try again later.',
+      //   variant : "destructive"
+      // });
     }
   };
 

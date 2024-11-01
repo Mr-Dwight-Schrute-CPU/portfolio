@@ -11,7 +11,6 @@ import Card from "@/components/Card";
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import EmailForm from "@/components/EmailForm";
-import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const skills = ImportedSkills;
@@ -81,7 +80,6 @@ export default function Home() {
       <div id="EmailSection">
         <EmailForm/>
       </div>
-      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnHover draggable />
     </div>
     
   );

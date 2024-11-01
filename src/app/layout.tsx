@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,11 +32,13 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
             {children}
+            <Toaster/>
           </ThemeProvider>
         ) : (
           <>
             <Navbar />
             {children}
+            <Toaster/>
           </>
         )}
       </body>

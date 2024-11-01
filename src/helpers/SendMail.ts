@@ -1,5 +1,7 @@
+import { toast } from '@/hooks/use-toast';
 import emailjs from 'emailjs-com';
-import { toast } from 'react-toastify';
+
+
 
 const sendMail = (userName: string, userEmail: string, userMessage: string) => {
 
@@ -9,8 +11,12 @@ const sendMail = (userName: string, userEmail: string, userMessage: string) => {
 
   // Check if required configurations are available
   if (!serviceID || !templateID || !userID) {
-    toast.error('Missing configuration. Please check your email service settings.', { position: "top-right" });
-    return;
+    toast({
+        title: 'Configuration Error',
+        description: 'Missing configuration. Please check your email service settings.',
+        variant : "destructive"
+      });
+      return;
   }
 
   const templateParams = {
@@ -23,11 +29,20 @@ const sendMail = (userName: string, userEmail: string, userMessage: string) => {
 
   emailjs.send(serviceID, templateID, templateParams, userID)
     .then((response) => {
-      toast.success('Email sent successfully!', { position: "top-right" });
+        toast({
+            title: 'Success',
+            description: 'Email Sent Successfully!',
+            variant : "default"
+          });
+          return;
     })
     .catch((error) => {
       console.error('Email failed to send:', error); // Log error details for debugging
-      toast.error('Email failed to send. Please try again later.', { position: "top-right" });
+      toast({
+        title: 'Send Error',
+        description: 'Email failed to send. Please try again later.',
+        variant : "destructive"
+      });
     });
 };
 
