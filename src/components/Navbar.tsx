@@ -48,26 +48,26 @@ const Navbar = () => {
 
       {/* Sidebar Drawer */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogOverlay className="fixed inset-0 opacity-50" />
-        
-        <DialogContent className="relative z-10 rounded-lg shadow-lg w-1/2 p-6">
-          <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
-          <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-xl">
-            &times;
-          </button>
-          <div className="flex flex-col gap-4 mt-4">
-            <Link href="/" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/' ? 'text-indigo-500' : ''}`}>
-              <FaHome /> Home
-            </Link>
-            <Link href="/projects" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/projects' ? 'text-indigo-500' : ''}`}>
-              <GoProjectSymlink /> Projects
-            </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/about' ? 'text-indigo-500' : ''}`}>
-              <IoInformationCircleOutline /> About Me
-            </Link>
-          </div>
-        </DialogContent>
-      </Dialog>
+  <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-lg z-40" />
+  
+  <DialogContent className="fixed top-0 left-1/2 transform -translate-x-1/2 mt-6 z-50 rounded-lg shadow-lg w-11/12 max-w-md p-6">
+    <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
+    <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-xl">
+      &times;
+    </button>
+    <div className="flex flex-col gap-4 mt-4">
+      <Link href="/" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/' ? 'text-indigo-500' : ''}`}>
+        <FaHome /> Home
+      </Link>
+      <Link href="/projects" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/projects' ? 'text-indigo-500' : ''}`}>
+        <GoProjectSymlink /> Projects
+      </Link>
+      <Link href="/about" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/about' ? 'text-indigo-500' : ''}`}>
+        <IoInformationCircleOutline /> About Me
+      </Link>
+    </div>
+  </DialogContent>
+</Dialog>
     </nav>
   )
 }

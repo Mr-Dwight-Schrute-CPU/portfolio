@@ -27,7 +27,7 @@ const page = () => {
         <h3 className='flex items-center gap-2 text-3xl font-semibold font-mono'> <IoInformationCircleOutline/> Short Bio</h3>
         <p className='p-2 text-lg sm:text-2xl'>
         I am a third-year B.Tech student at <span className='text-blue-500 font-semibold'>USICT (GGSIPU Main Campus)
-          </span> , passionate about web development and technology. With a strong foundation in full-stack development, I specialize in creating innovative and user-friendly applications using <span className='text-blue-500 font-semibold'> Next.js and the MERN stack.</span> I have experience working with tools like Zod and Tailwind CSS, which I use to enhance both the design and functionality of my projects. <br/> <br/>
+          </span>, passionate about web development and technology. With a strong foundation in full-stack development, I specialize in creating innovative and user-friendly applications using <span className='text-blue-500 font-semibold'> Next.js and the MERN stack.</span> I have experience working with tools like Zod and Tailwind CSS, which I use to enhance both the design and functionality of my projects. <br/> <br/>
 
         I am <span className='text-blue-500 font-semibold'>currently seeking internship opportunities</span>  to gain valuable industry experience and apply my skills in a real-world setting. I am eager to learn from professionals in the field and contribute to meaningful projects. My commitment to continuous learning drives me to tackle complex challenges and develop both my technical and soft skills, preparing me for a successful career in technology.
         </p>
