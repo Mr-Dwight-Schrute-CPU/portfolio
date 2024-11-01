@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaHome } from "react-icons/fa";
@@ -13,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="flex my-2 justify-between items-center sticky top-0 w-full py-4 z-50 px-10">
       {/* Logo */}
-      <Image width={150} height={150} src="/Images/LogoWOBg.svg" alt="Logo" />
+      <Link href='/' className='gradient-text font-futura-3d text-4xl font-bold'>_KN_</Link>
 
       {/* Centered Links */}
       <div className="absolute left-1/2 transform -translate-x-1/2 border-2 border-white/30 bg-black/10 backdrop-blur-lg  border-gray-400 rounded-full py-2 px-5 flex gap-8">
