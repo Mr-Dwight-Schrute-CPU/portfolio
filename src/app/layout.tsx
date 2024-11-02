@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
-import Head from "next/head";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
