@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import { FaChevronRight } from "react-icons/fa6";
-
+// import { FaChevronRight } from "react-icons/fa6";
+import { FaHandHoldingHeart } from "react-icons/fa6";
 import { projects } from '@/helpers/Project'
 import Card from '@/components/Card'
 import { useRouter } from 'next/navigation'
@@ -43,11 +43,11 @@ const page = () => {
       <Link href="/#EmailSection">
         <button className='tilt-button'>
           <div className='md:text-xl'>
-          Liked My Projects ?
+          Liked My Projects?
           </div>
           <div className='flex p-1 md:p-2 items-center gap-2 text-sm'>
           Show some love here
-          <FaChevronRight/>
+          <FaHandHoldingHeart/>
           </div>
         </button>
       </Link>
