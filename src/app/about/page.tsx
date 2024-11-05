@@ -35,14 +35,19 @@ const page = () => {
         </p>
       </div>
       <div className='flex flex-col md:flex-row items-center gap-5 my-5'>
+      <Link href='https://drive.google.com/file/d/1VzfE4J7hh3u5pxtNcF7zClhdcDzU4z32/view?usp=sharing' target="_blank" rel="noopener noreferrer">
+        <button className="tilt-button flex items-center gap-5 text-xl">
+          Resume <FaExternalLinkAlt/> 
+        </button>
+        </Link>
         <Link href='https://www.upwork.com/freelancers/~01197b924244b64389' target="_blank" rel="noopener noreferrer">
         <button className="tilt-button flex items-center gap-5 text-xl">
           Hire Me!!! <FaSquareUpwork/> 
         </button>
         </Link>
-        <button onClick={() => {router.replace('/projects')}} className="tilt-button flex items-center gap-5 text-xl">
-              Visit Projects <GoProjectSymlink/>
-        </button>
+        
+
+        
       </div>
       <div className='Connect-with-me text-center md:text-left w-full'>
         <div className='flex items-center gap-4 mb-5 text-2xl font-mono font-semibold'>
@@ -64,7 +69,7 @@ const page = () => {
 
         </div>
       </div>
-      <div className='my-10 mt-20 w-full text-right'>
+      {/* <div className='my-10 mt-20 w-full text-right'>
       <Link href="https://drive.google.com/file/d/1VzfE4J7hh3u5pxtNcF7zClhdcDzU4z32/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer">
@@ -79,7 +84,7 @@ const page = () => {
 
         </button>
       </Link>
-      </div>
+      </div> */}
     </div>
   )
 }
