@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import {  FaChevronRight, FaGithub, FaLinkedin, FaRegHandshake } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
@@ -10,6 +11,7 @@ import { IoMailSharp } from "react-icons/io5";
 import { IoInformationCircleOutline } from 'react-icons/io5'
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareUpwork } from "react-icons/fa6";
 const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
@@ -33,9 +35,11 @@ const page = () => {
         </p>
       </div>
       <div className='flex flex-col md:flex-row items-center gap-5 my-5'>
-        <button onClick={() => {router.replace('/#EmailSection')}} className="tilt-button flex items-center gap-5 text-xl">
-          Leave A Message <IoMailSharp/> 
+        <Link href='https://www.upwork.com/freelancers/~01197b924244b64389' target="_blank" rel="noopener noreferrer">
+        <button className="tilt-button flex items-center gap-5 text-xl">
+          Hire Me!!! <FaSquareUpwork/> 
         </button>
+        </Link>
         <button onClick={() => {router.replace('/projects')}} className="tilt-button flex items-center gap-5 text-xl">
               Visit Projects <GoProjectSymlink/>
         </button>
@@ -61,14 +65,16 @@ const page = () => {
         </div>
       </div>
       <div className='my-10 mt-20 w-full text-right'>
-      <Link href="mailto:kunalnasa.dev@gmail.com">
+      <Link href="https://drive.google.com/file/d/1VzfE4J7hh3u5pxtNcF7zClhdcDzU4z32/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer">
         <button className='tilt-button'>
           <div className='text-xl'>
-          Glad to have you here
+            Get My Resume Here!
           </div>
           <div className='flex p-2 items-center gap-2 text-sm'>
-          Send Me A Message
-          <FaChevronRight/>
+
+          <FaExternalLinkAlt/>
           </div>
 
         </button>

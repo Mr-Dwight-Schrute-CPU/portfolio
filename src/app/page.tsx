@@ -11,6 +11,7 @@ import Card from "@/components/Card";
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import EmailForm from "@/components/EmailForm";
+import { IoDocument } from "react-icons/io5";
 
 export default function Home() {
   const skills = ImportedSkills;
@@ -31,6 +32,8 @@ export default function Home() {
           <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://github.com/KunalNasa' target="_blank" rel="noopener noreferrer"><FaGithub /></Link>
           <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://www.linkedin.com/in/kunal-nasa-24840b249/' target="_blank" rel="noopener noreferrer"><FaLinkedin /></Link>
           <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://x.com/nasa_kunal' target="_blank" rel="noopener noreferrer"><FaTwitterSquare /></Link>
+          <Link className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full" href='https://drive.google.com/file/d/1VzfE4J7hh3u5pxtNcF7zClhdcDzU4z32/view?usp=sharing' target="_blank" rel="noopener noreferrer"><IoDocument /></Link>
+
         </div>
         <div className="h-64 text-5xl w-full flex items-center justify-center animation-bounce">
           <RiScrollToBottomLine />
@@ -73,13 +76,13 @@ export default function Home() {
         ))}
         </div>
         </div>
-        
       </div>
 
       <div className="Projects-Button mx-auto my-10">
       <button onClick={() => {router.replace('/projects')}} className="tilt-button flex items-center gap-5 text-lg">
         Load More <FaChevronRight/>
   </button>
+  
       </div>
       <div id="EmailSection">
         <EmailForm/>
