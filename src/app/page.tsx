@@ -68,6 +68,7 @@ export default function Home() {
             <Card
               key={index}
               imageUrl={project.imageUrl}
+              liveUrl = {project.liveUrl}
               title={project.title}
               description={project.description}
               githubUrl={project.githubUrl}

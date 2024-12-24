@@ -13,7 +13,7 @@ const page = () => {
   const router = useRouter();
   return (
     <div className='MainContainer flex flex-col w-7/12 mx-auto'>
-      <div className=' flex items-center p-4 flex-col-reverse md:flex-row justify-between w-full'>
+      <div className=' flex items-center p-5 flex-col-reverse md:flex-row justify-around w-full'>
         <Image width={300} height={300} src="/Images/SomeRecentWork.svg" alt="Some Recent Work" />
         <Image width={200} height={200} src="/Images/Bitmoji.webp" alt="Some Recent Work" />
       </div>
@@ -23,6 +23,7 @@ const page = () => {
         {projects.map((project, index) => (
             <Card
               key={index}
+              liveUrl={project.liveUrl}
               imageUrl={project.imageUrl}
               title={project.title}
               description={project.description}
