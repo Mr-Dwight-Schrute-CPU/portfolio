@@ -1,6 +1,7 @@
 'use client'
 import TypingAnimation from "@/components/TypingAnimation";
 import Link from "next/link";
+import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import { FaGithub, FaTwitterSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { RiScrollToBottomLine } from "react-icons/ri";
@@ -12,11 +13,12 @@ import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import EmailForm from "@/components/EmailForm";
 import { IoDocument } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Home() {
   const skills = ImportedSkills;
   const router = useRouter();
-  
+  const [allSkills, setAllSkills] = useState(false);
   return (
     <div className="relative h-auto w-10/12 flex flex-col mx-auto md:w-7/12">
       <div className="md:mt-20 mt-14">
@@ -45,7 +47,8 @@ export default function Home() {
           Skills <span className="text-blue-500 px-2"><MdOutlineMilitaryTech /></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
-  {skills.map((skill) => (
+  {skills.map((skill, index) => (
+    index < 5 && !allSkills && (
     <div
       key={skill.name}
       className={`skill-block flex items-center gap-2 md:text-xl text-black text-sm sm:text-lg font-semibold p-3 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl`}
@@ -55,8 +58,24 @@ export default function Home() {
         {skill.icon} 
       </span>
     </div>
+    )
+  ))}
+  {skills.map((skill) => (allSkills && (
+    <div
+      key={skill.name}
+      className={`skill-block flex items-center gap-2 md:text-xl text-black text-sm sm:text-lg font-semibold p-3 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl`}
+    >
+      <span>{skill.name}</span> 
+      <span className={`text-xl`}>
+        {skill.icon} 
+      </span>
+    </div>
+    )
   ))}
 </div>
+  <div className="flex items-center justify-center">
+    <button onClick={() => {setAllSkills(!allSkills)}} className="transform hover:-translate-y-2 transition-all duration-300 hover:scale-105 text-3xl mt-4 hover:shadow-lg hover:shadow-gray-500/50 p-1 md:p-2 rounded-full">{allSkills ? <CiCircleChevUp/> : <CiCircleChevDown/>}</button>
+  </div>
       </div>
 
       <div className="projects-div my-14 font-serif">
