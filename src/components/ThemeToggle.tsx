@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   return (
     <button
   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-  className="p-2 bg-white rounded-full dark:bg-black text-2xl transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+
 >
   {theme === "light" ? <FaSun  /> : <BsMoonStarsFill />}
 </button>

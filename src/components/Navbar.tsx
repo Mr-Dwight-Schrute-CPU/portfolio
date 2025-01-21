@@ -1,74 +1,85 @@
 'use client'
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { FaHome } from "react-icons/fa";
-import { GoProjectSymlink } from "react-icons/go";
-import { IoInformationCircleOutline } from "react-icons/io5";
-import { AiOutlineMenu } from "react-icons/ai"; // Hamburger icon
 import ThemeToggle from './ThemeToggle'
-import Image from 'next/image'
-import { Dialog, DialogContent, DialogTitle, DialogOverlay } from '@radix-ui/react-dialog';
+
+import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconScript } from '@tabler/icons-react';
+import { FloatingDock } from './ui/floating-dock';
+import { BsMailbox } from 'react-icons/bs';
+import { MdAllInbox, MdEmail } from 'react-icons/md';
 
 const Navbar = () => {
-  const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-
+  const links = [
+    // {
+    //   title: "Home",
+    //   icon: (
+    //     <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "/",
+    // },
+ 
+    // {
+    //   title: "Projects",
+    //   icon: (
+    //     <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "/projects",
+    // },
+    // {
+    //   title: "About Me",
+    //   icon: (
+    //     <IconRobotFace className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "/about",
+    // },
+    {
+      title: "Resume",
+      icon: (
+        <IconScript className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://drive.google.com/file/d/17c00acJCWrzgti_xv7yLuqoNQQ9EmBwg/view?usp=sharing",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/kunal-nasa-24840b249/",
+    },
+ 
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://x.com/nasa_kunal",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: `https://github.com/KunalNasa`,
+    },
+    {
+      title: "Email",
+      icon: (
+        <MdEmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: `mailto:kunalnasa.dev@gmail.com`,
+    },
+    {
+      title: "Theme",
+      icon: <ThemeToggle/>,
+      href: `#`,
+    },
+  ];
   return (
-    <nav className="flex my-2 justify-between items-center sticky top-0 w-full py-4 z-50 px-4 md:px-10">
+    <div className="flex items-center justify-center fixed bottom-10 z-50 w-full bg-none">
       
-      {/* Logo */}
-      <Link href="/" className="text-4xl font-bold">
-        <Image className="rounded-lg" width={75} height={75} src="/Images/AppLogo.webp" alt="App Logo" />
-      </Link>
-
-      {/* Centered Links for Laptop/Tablet */}
-      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 border-2 border-white/30 bg-black/10 backdrop-blur-lg border-gray-400 rounded-full py-2 px-5 gap-8">
-        <Link href="/" className={`py-2 min-w-36 justify-center px-4 flex items-center gap-1 rounded-full ${pathname === '/' ? 'bg-gray-300 text-gray-900' : 'hover:bg-gray-300 hover:text-gray-900'}`}>
-          <FaHome /> Home
-        </Link>
-        <Link href="/projects" className={`py-2 min-w-36 justify-center px-4 flex items-center gap-1 rounded-full ${pathname === '/projects' ? 'bg-gray-300 text-gray-900' : 'hover:bg-gray-300 hover:text-gray-900'}`}>
-          <GoProjectSymlink /> Projects
-        </Link>
-        <Link href="/about" className={`py-2 min-w-36 justify-center px-4 flex items-center gap-1 rounded-full ${pathname === '/about' ? 'bg-gray-300 text-gray-900' : 'hover:bg-gray-300 hover:text-gray-900'}`}>
-          <IoInformationCircleOutline /> About Me
-        </Link>
-      </div>
-
-      {/* Theme Toggle and Hamburger Menu for All Screens */}
-      <div className="flex items-center space-x-3">
-        <ThemeToggle />
-        {/* Conditionally render Hamburger and Close icons */}
-        {!isOpen && (
-          <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
-            <AiOutlineMenu />
-          </button>
-        )}
-      </div>
-
-      {/* Sidebar Drawer */}
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-  <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-lg z-40" />
-  
-  <DialogContent className="fixed top-0 left-1/2 transform -translate-x-1/2 mt-6 z-50 rounded-lg shadow-lg w-11/12 max-w-md p-6">
-    <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
-    <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-xl">
-      &times;
-    </button>
-    <div className="flex flex-col gap-4 mt-4">
-      <Link href="/" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/' ? 'text-blue-500' : ''}`}>
-        <FaHome /> Home
-      </Link>
-      <Link href="/projects" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/projects' ? 'text-blue-500' : ''}`}>
-        <GoProjectSymlink /> Projects
-      </Link>
-      <Link href="/about" onClick={() => setIsOpen(false)} className={`py-2 flex items-center gap-2 ${pathname === '/about' ? 'text-blue-500' : ''}`}>
-        <IoInformationCircleOutline /> About Me
-      </Link>
-    </div>
-  </DialogContent>
-</Dialog>
-    </nav>
+    <FloatingDock
+      // mobileClassName="translate-y-20" 
+      items={links}
+    />
+  </div>
   )
 }
 

@@ -1,42 +1,56 @@
 export const projects = [
-  {
-      imageUrl: '/Images/SkillForgeLogo.png',
-      title: 'SkillForge',
-      liveUrl: "https://skillforge.kunalnasa.xyz/",
-      description: 'An AI-powered roadmap creation tool designed to guide users in achieving their learning goals while tracking their progress effectively.',
-      githubUrl: 'https://github.com/KunalNasa/skillforge',
-  },
-  {
-      imageUrl: '/Images/WiseUpLogo.svg',
-      title: 'WiseUp',
-      liveUrl: "https://wiseup-app.vercel.app/",
-      description: 'A transaction management SaaS application that helps users track monthly transactions and visualize spending analysis through interactive graphs.',
-      githubUrl: 'https://github.com/KunalNasa/WiseUp',
-  },
-  {
-      imageUrl: '/Images/ChatIcon.webp',
-      title: 'WeTalk',
-      liveUrl: "https://wetalk-2vvh.onrender.com/",
-      description: 'A real-time chatting application developed using Socket.IO and the MERN stack, providing users with instant messaging, and a seamless user experience.',
-      githubUrl: 'https://github.com/KunalNasa/ChatApp',
-  },
-  {
-      imageUrl: '/Images/FeedBackApp.png',
-      title: 'SendMeAFeedback',
-      liveUrl: "https://send-me-a-feedback.vercel.app/",
-      description: 'An anonymous feedback application utilizing Next.js, TypeScript, and Zod for validation, integrating the Gemini API to generate intelligent feedback responses while ensuring user privacy.',
-      githubUrl: 'https://github.com/KunalNasa/send-me-a-feedback',
-  },
-  {
-      imageUrl: '/Images/GDlogo.png',
-      title: 'Green Dash',
-      description: 'A sustainable living dashboard featuring a carbon footprint calculator built with the MERN stack, aimed at promoting eco-friendly habits and helping users track their environmental impact effectively.',
-      githubUrl: 'https://github.com/KunalNasa/SustainableLivingDash',
-  },
-  {
-      imageUrl: '/Images/spotifyLogo.svg',
-      title: 'Spotify Clone',
-      description: 'A fully responsive Spotify clone developed using Vanilla JavaScript, featuring audio playback, playlist management, and a user-friendly interface for an immersive music experience.',
-      githubUrl: 'https://github.com/KunalNasa/Web-Dev/tree/main/Spotify',
-  },
+    {
+        imageUrl: '/Images/go0ton.png',
+        title: 'Go0-n',
+        liveUrl: "https://go0-n.com",
+        description: 'Go0-n is a talent marketplace that helps organizations outsource their recruitment process to our agency. It also gives recruiters a chance to earn by providing the right talent for job postings. Built with Next.js, it offers role-based access for clients and recruiters, all managed through a separate admin portal.',
+        githubUrl: 'https://github.com/KunalNasa/skillforge',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/SkillForgeLogo.png',
+        title: 'SkillForge',
+        liveUrl: "https://skillforge.kunalnasa.xyz/",
+        description: 'SkillForge is an AI-powered roadmap creation tool designed to guide users in achieving their learning goals while tracking their progress effectively.You can ask for a personalized roadmap by providing it’s duration, title, and specifications. It’s your friendly companion for skill development!',
+        githubUrl: 'https://github.com/KunalNasa/skillforge',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/WiseUp.png',
+        title: 'WiseUp',
+        liveUrl: "https://wiseup.kunalnasa.xyz",
+        description: 'WiseUp is a transaction management SaaS application that helps users track monthly transactions and visualize spending analysis through interactive graphs. It’s your friendly financial assistant!',
+        githubUrl: 'https://github.com/KunalNasa/WiseUp',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/wetalk.png',
+        title: 'WeTalk',
+        liveUrl: "https://wetalk-2vvh.onrender.com/",
+        description: 'WeTalk is a real-time chatting application developed using Socket.IO and the MERN stack. It provides users with instant messaging and a seamless user experience. Chat with friends in a friendly way!',
+        githubUrl: 'https://github.com/KunalNasa/ChatApp',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/FeedBackApp.png',
+        title: 'SendMeAFeedback',
+        liveUrl: "https://send-me-a-feedback.vercel.app/",
+        description: 'SendMeAFeedback is an anonymous feedback application utilizing Next.js, TypeScript, and Zod for validation. It integrates the Gemini API to generate intelligent feedback responses while ensuring user privacy. Your friendly feedback tool!',
+        githubUrl: 'https://github.com/KunalNasa/send-me-a-feedback',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/GDlogo.png',
+        title: 'Green Dash',
+        description: 'Green Dash is a sustainable living dashboard featuring a carbon footprint calculator built with the MERN stack. It promotes eco-friendly habits and helps users track their environmental impact effectively. Your friendly guide to a greener life!',
+        githubUrl: 'https://github.com/KunalNasa/SustainableLivingDash',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
+    {
+        imageUrl: '/Images/spotifyLogo.svg',
+        title: 'Spotify Clone',
+        description: 'This Spotify Clone is a fully responsive music application developed using Vanilla JavaScript. It features audio playback, playlist management, and a user-friendly interface for an immersive music experience. Enjoy your music in a friendly way!',
+        githubUrl: 'https://github.com/KunalNasa/Web-Dev/tree/main/Spotify',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+    },
 ];

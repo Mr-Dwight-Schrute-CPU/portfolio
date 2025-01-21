@@ -23,11 +23,12 @@ const page = () => {
         {projects.map((project, index) => (
             <Card
               key={index}
-              liveUrl={project.liveUrl}
-              imageUrl={project.imageUrl}
+              website={project.liveUrl ? project.liveUrl : undefined}
+              image={project.imageUrl}
               title={project.title}
               description={project.description}
-              githubUrl={project.githubUrl}
+              github={project.githubUrl}
+              techstack={[""]}
             />
         ))}
         </div>
