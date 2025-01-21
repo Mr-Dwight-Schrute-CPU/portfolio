@@ -9,7 +9,6 @@ export default function Home() {
       <AboutMe/>
       <MySkills/>
       <MyProjects/>
-
       <div id="EmailSection">
         <h3 className="w-full text-center mt-10 text-3xl font-semibold">Stay Connected</h3>
         <EmailForm/>

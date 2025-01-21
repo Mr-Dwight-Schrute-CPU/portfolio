@@ -16,8 +16,8 @@ type props = {
 }
 const Card = ({image, title, description, website, github, techstack} : props) => {
   return (
-    <div className='MainContainer bg-white dark:bg-black rounded-md w-96 border border-gray-700'>
-      <div className="h-52 hover:scale-95 hover:rounded-b-md w-full rounded-t-md overflow-hidden transition-transform duration-500 ease-in-out">
+    <div className="MainContainer bg-white dark:bg-black rounded-md  mx-auto border border-gray-700">
+      <div className="h-auto hover:scale-95 hover:rounded-b-md w-full rounded-t-md overflow-hidden transition-transform duration-500 ease-in-out">
         <Image 
           className="object-cover hover:rounded-b-md" 
           src={image} 
