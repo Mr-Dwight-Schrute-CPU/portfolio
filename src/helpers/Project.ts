@@ -4,7 +4,6 @@ export const projects = [
         title: 'Go0-n',
         liveUrl: "https://go0-n.com",
         description: 'Go0-n is a talent marketplace that helps organizations outsource their recruitment process to our agency. It also gives recruiters a chance to earn by providing the right talent for job postings. Built with Next.js, it offers role-based access for clients and recruiters, all managed through a separate admin portal.',
-        githubUrl: 'https://github.com/KunalNasa/skillforge',
         techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
     },
     {
