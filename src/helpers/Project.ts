@@ -4,7 +4,7 @@ export const projects = [
         title: 'Go0-n',
         liveUrl: "https://go0-n.com",
         description: 'Go0-n is a talent marketplace that helps organizations outsource their recruitment process to our agency. It also gives recruiters a chance to earn by providing the right talent for job postings. Built with Next.js, it offers role-based access for clients and recruiters, all managed through a separate admin portal.',
-        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI', 'Aceternity UI', 'Axios']
     },
     {
         imageUrl: '/Images/SkillForgeLogo.png',
@@ -12,7 +12,7 @@ export const projects = [
         liveUrl: "https://skillforge.kunalnasa.xyz/",
         description: 'SkillForge is an AI-powered roadmap creation tool designed to guide users in achieving their learning goals while tracking their progress effectively.You can ask for a personalized roadmap by providing it’s duration, title, and specifications. It’s your friendly companion for skill development!',
         githubUrl: 'https://github.com/KunalNasa/skillforge',
-        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Gemini API', 'Shadcn UI']
     },
     {
         imageUrl: '/Images/WiseUp.png',
@@ -20,7 +20,7 @@ export const projects = [
         liveUrl: "https://wiseup.kunalnasa.xyz",
         description: 'WiseUp is a transaction management SaaS application that helps users track monthly transactions and visualize spending analysis through interactive graphs. It’s your friendly financial assistant!',
         githubUrl: 'https://github.com/KunalNasa/WiseUp',
-        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+        techstack : ['PostgreSQL', 'Next.js', 'Zod', 'Clerk', 'Shadcn UI', 'Stripe', 'Web-hooks', 'NeonDB']
     },
     {
         imageUrl: '/Images/wetalk.png',
@@ -28,7 +28,7 @@ export const projects = [
         liveUrl: "https://wetalk-2vvh.onrender.com/",
         description: 'WeTalk is a real-time chatting application developed using Socket.IO and the MERN stack. It provides users with instant messaging and a seamless user experience. Chat with friends in a friendly way!',
         githubUrl: 'https://github.com/KunalNasa/ChatApp',
-        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI']
+        techstack : ['MongoDB', 'React.js', 'Express.js',  'Zod', 'Socket.io', 'Daisy UI', 'Zustand']
     },
     {
         imageUrl: '/Images/FeedBackApp.png',
