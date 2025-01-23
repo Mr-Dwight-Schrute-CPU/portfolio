@@ -42,7 +42,7 @@ const Navbar = () => {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://www.linkedin.com/in/kunal-nasa-24840b249/",
+      href: "https://www.linkedin.com/in/kunalnasa/",
     },
  
     {
