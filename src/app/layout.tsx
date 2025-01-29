@@ -1,11 +1,12 @@
-'use client'
-import localFont from "next/font/local";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "next-themes";
-import { useEffect, useState } from "react";
-import { Toaster } from "@/components/ui/toaster";
+'use client';  // Marking the file as a client component
 
+import { useEffect, useState } from "react";
+import localFont from "next/font/local";
+import { ThemeProvider } from "next-themes";
+import Navbar from "@/components/Navbar";
+import { Toaster } from "@/components/ui/toaster";
+import MetadataProvider from "@/components/MetadataProvider";
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,36 +19,35 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// can not add metadata because of client component
-
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    document.title = "KunalNasa - Portfolio";
-    const favicon = document.createElement("link");
-    favicon.rel = "icon";
-    favicon.href = "/Images/AppLogo.ico";
-    document.head.appendChild(favicon);
   }, []);
 
   return (
     <html lang="en">
-      
-      <body className={`${geistSans.variable} dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative  ${geistMono.variable} antialiased`}>
-      
+      <body className={`${geistSans.variable} dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative ${geistMono.variable} antialiased`}>
         {mounted ? (
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navbar />
-            {children}
-            <Toaster/>
-          </ThemeProvider>
+          <>
+            <MetadataProvider
+              title="Kunal Nasa - Portfolio"
+              description="Hey, I'm Kunal Nasa! Explore my portfolio, skills, and projects."
+              imageUrl="/Images/AppLogo.jpeg"
+              url="https://kunalnasa.xyz"
+            />
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <Navbar />
+              {children}
+              <Toaster />
+            </ThemeProvider>
+          </>
         ) : (
           <>
             <Navbar />
             {children}
-            <Toaster/>
+            <Toaster />
           </>
         )}
       </body>
