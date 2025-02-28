@@ -12,7 +12,7 @@ const TypingAnimation = () => {
         "Open to Work!!!",
         1000,
       ]}
-       wrapper="span" speed={50} className="font-bold  lg:text-2xl dark:text-gray-400 text-gray-700" repeat={Infinity} />;
+       wrapper="span" speed={50} className="font-bold  lg:text-2xl text-green-500" repeat={Infinity} />;
 };
 
 export default TypingAnimation;

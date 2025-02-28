@@ -40,35 +40,37 @@ const EmailForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mb-24 mx-auto my-10 p-6  border rounded-lg shadow-md">
+    <div className="mb-24 mx-auto mt-5 p-6  border rounded-lg shadow-md">
       <h2 className="text-xl font-semibold mb-4">Send Me A Message</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="userName" className="block text-sm font-medium dark:text-gray-300 text-gray-700">Name</label>
-          <input
-            type="text"
-            placeholder='enter your name'
-            id="userName"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            required
-            className="mt-1 text-white dark:text-black bg-gray-700 dark:bg-gray-300 block w-full border  rounded-md p-2"
-          />
+        <div className='flex md:flex-row flex-col w-full'>
+          <div className="mb-4 md:w-1/2 w-full mx-2">
+            <label htmlFor="userName" className="block text-sm font-medium dark:text-gray-300 text-gray-700">Name</label>
+            <input
+              type="text"
+              placeholder='enter your name'
+              id="userName"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              required
+              className="mt-1 text-black dark:text-white block w-full border  rounded-md p-2"
+            />
+          </div>
+          <div className="mb-4 md:w-1/2 w-full mx-2">
+            <label htmlFor="userEmail" className="block text-sm font-medium">Email</label>
+            <input
+              type="email"
+              placeholder='Enter your email'
+              id="userEmail"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+              required
+              className="mt-1 block w-full border text-black dark:text-white rounded-md p-2"
+            />
+          </div>
         </div>
-        <div className="mb-4">
-          <label htmlFor="userEmail" className="block text-sm font-medium dark:text-gray-300 text-gray-700 ">Email</label>
-          <input
-            type="email"
-            placeholder='Enter your email'
-            id="userEmail"
-            value={userEmail}
-            onChange={(e) => setUserEmail(e.target.value)}
-            required
-            className="mt-1 block w-full border border-gray-300 text-white dark:text-black bg-gray-700 dark:bg-gray-300 rounded-md p-2"
-          />
-        </div>
-        <div className="mb-4">
+        <div className="mb-4 mx-2">
           <label htmlFor="userMessage" className="block text-sm font-medium dark:text-gray-300 text-gray-700">Message</label>
           <textarea
             id="userMessage"
@@ -76,12 +78,12 @@ const EmailForm: React.FC = () => {
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
             required
-            className="mt-1 block w-full border border-gray-300 text-white dark:text-black bg-gray-700 dark:bg-gray-300 rounded-md p-2"
+            className="mt-1 block w-full border text-black dark:text-white rounded-md p-2"
           ></textarea>
         </div>
         <button
           type="submit"
-          className="px-8 py-2 dark:bg-gray-300 dark:text-gray-700 bg-gray-700 text-white text-sm rounded-md font-semibold hover:dark:bg-white/[0.8] hover:bg-black/[0.8] hover:shadow-lg"
+          className="px-8 mx-2 py-2 dark:bg-green-500 dark:text-gray-700 bg-blue-500 text-white text-sm rounded-md font-semibold hover:dark:bg-white/[0.8] hover:bg-black/[0.8] hover:shadow-lg"
         >
           Send Message
         </button>

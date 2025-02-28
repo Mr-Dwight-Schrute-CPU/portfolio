@@ -1,12 +1,5 @@
 export const projects = [
     {
-        imageUrl: '/Images/go0ton.png',
-        title: 'Go0-n',
-        liveUrl: "https://go0-n.com",
-        description: 'Go0-n is a talent marketplace that helps organizations outsource their recruitment process to our agency. It also gives recruiters a chance to earn by providing the right talent for job postings. Built with Next.js, it offers role-based access for clients and recruiters, all managed through a separate admin portal.',
-        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI', 'Aceternity UI', 'Axios']
-    },
-    {
         imageUrl: '/Images/SkillForgeLogo.png',
         title: 'SkillForge',
         liveUrl: "https://skillforge.kunalnasa.xyz/",
@@ -29,6 +22,13 @@ export const projects = [
         description: 'WeTalk is a real-time chatting application developed using Socket.IO and the MERN stack. It provides users with instant messaging and a seamless user experience. Chat with friends in a friendly way!',
         githubUrl: 'https://github.com/KunalNasa/ChatApp',
         techstack : ['MongoDB', 'React.js', 'Express.js',  'Zod', 'Socket.io', 'Daisy UI', 'Zustand']
+    },
+    {
+        imageUrl: '/Images/go0ton.png',
+        title: 'Recruitment Marketplace',
+        liveUrl: "https://go0-n.com",
+        description: 'Built a recruitment marketplace that helps organizations outsource their recruitment process to us. It also gives recruiters a chance to earn by providing the right talent for job postings.',
+        techstack : ['MongoDB', 'Next.js', 'Zod', 'Nodemailer', 'Shadcn UI', 'Aceternity UI', 'Axios']
     },
     {
         imageUrl: '/Images/FeedBackApp.png',

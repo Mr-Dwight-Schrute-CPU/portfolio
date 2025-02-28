@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} dark:bg-gray-950 bg-slate-50 relative ${geistMono.variable} antialiased`}>
         {mounted ? (
           <>
             <MetadataProvider
