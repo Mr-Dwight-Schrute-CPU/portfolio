@@ -24,11 +24,7 @@ const EmailForm: React.FC = () => {
       setUserEmail('');
       setUserMessage('');
       setError(''); // Clear error message
-      toast({
-        title: 'Success',
-        description: 'Email sent successfully!',
-        variant : "default"
-      });
+      
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
