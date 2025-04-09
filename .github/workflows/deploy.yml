@@ -25,13 +25,9 @@ jobs:
                 push: true
                 tags: kunalnasa/portfolio-image:${{ github.sha }}
                 secrets: |
-                    id=email_service_id,env=EMAIL_SERVICE_ID
-                    id=email_template_id,env=EMAIL_TEMPLATE_ID
-                    id=email_public_key,env=EMAIL_PUBLIC_KEY
-              env:
-                EMAIL_SERVICE_ID: ${{ secrets.EMAIL_SERVICE_ID }}
-                EMAIL_TEMPLATE_ID: ${{ secrets.EMAIL_TEMPLATE_ID }}
-                EMAIL_PUBLIC_KEY: ${{ secrets.EMAIL_PUBLIC_KEY }}
+                    email_service_id=${{ secrets.EMAIL_SERVICE_ID }}
+                    email_template_id=${{ secrets.EMAIL_TEMPLATE_ID }}
+                    email_public_key=${{ secrets.EMAIL_PUBLIC_KEY }}
 
 
         
