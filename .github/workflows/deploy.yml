@@ -1,34 +1,31 @@
-name : Deploy the app
+name : Push to Docker Hub
 
-on:
-    push:
-        branches:
-        - main
+on: 
+  push:
+    branches: 
+      - main
 jobs:
     build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Docker login
+          uses: docker/login-action@v2
+          with:
+            username: ${{github.secrets.DOCKER_USERNAME}}
+            password: ${{github.secrets.DOCKER_PASSWORD}}
+        - name: Build and Push image
+          uses: docker/build-push-action@v4
+          with:
+            context: .
+            file: ./Docker/Dockerfile.prod
+            push: true
+            tags: kunalnasa/portfolio-image:${{ github.sha }}
+            secrets: |
+              email_service_id=${{ secrets.EMAIL_SERVICE_ID }}
+              email_template_id=${{ secrets.EMAIL_TEMPLATE_ID }}
+              email_public_key=${{ secrets.EMAIL_PUBLIC_KEY }}
 
-            - name : Docker login
-              uses: docker/login-action@v2
-              with:
-                username: ${{ secrets.DOCKER_USERNAME }}
-                password: ${{ secrets.DOCKER_PASSWORD }}
-
-            - name: Build and push Docker image
-              uses: docker/build-push-action@v4
-              with:
-                context: .
-                file: ./Docker/Dockerfile.prod
-                push: true
-                tags: kunalnasa/portfolio-image:${{ github.sha }}
-                secrets: |
-                    email_service_id=${{ secrets.EMAIL_SERVICE_ID }}
-                    email_template_id=${{ secrets.EMAIL_TEMPLATE_ID }}
-                    email_public_key=${{ secrets.EMAIL_PUBLIC_KEY }}
-
-
-        
-            
+    
+  
