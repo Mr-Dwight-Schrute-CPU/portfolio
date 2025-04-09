@@ -21,7 +21,7 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                 context: .
-                file: ./docker/Dockerfile.prod
+                file: ./Docker/Dockerfile.prod
                 push: true
                 tags: kunalnasa/portfolio-image:${{ github.sha }}
                 secrets: |
