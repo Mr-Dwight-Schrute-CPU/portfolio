@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import MetadataProvider from "@/components/MetadataProvider";
 import "./globals.css";
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
